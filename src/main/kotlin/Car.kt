@@ -1,1 +1,3 @@
-class Car(val name: String)
+class Car(val name: String) {
+    val distance: Int = 0
+}
