@@ -1,3 +1,11 @@
+private const val MINIMUM_MOVE_VALUE = 4
+
 class Car(val name: String) {
-    val distance: Int = 0
+    var distance: Int = 0
+
+    fun move(value: Int) {
+        if (value >= MINIMUM_MOVE_VALUE) {
+            distance ++
+        }
+    }
 }

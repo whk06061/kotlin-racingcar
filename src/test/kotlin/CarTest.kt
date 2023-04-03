@@ -18,4 +18,28 @@ class CarTest {
         // then
         assertThat(car.distance).isEqualTo(0)
     }
+
+    @Test
+    fun `값이 4이상이면 전진한다`() {
+        // given
+        val car = Car("aaa")
+
+        // when
+        car.move(4)
+
+        // then
+        assertThat(car.distance).isEqualTo(1)
+    }
+
+    @Test
+    fun `값이 4미만이면 전진하지 않는다`() {
+        // given
+        val car = Car("aaa")
+
+        // when
+        car.move(3)
+
+        // then
+        assertThat(car.distance).isEqualTo(0)
+    }
 }
