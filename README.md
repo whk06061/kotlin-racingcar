@@ -27,7 +27,8 @@
 - [x] 숫자를 생성한다.
 
 ### RandomNumberGenerator
-- [ ] 0에서 9 사이의 무작위 값을 구한다.
+- [x] NumberGenerator 인터페이스를 구현한다.
+- [x] 0에서 9 사이의 무작위 값을 구한다.
 
 ### Referee
 - [ ] 누가 우승했는지 판단한다.
