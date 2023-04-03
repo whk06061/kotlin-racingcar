@@ -1,8 +1,11 @@
 package domain
 
+import io.kotest.matchers.throwable.shouldHaveMessage
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertDoesNotThrow
+import org.junit.jupiter.api.assertThrows
+import java.lang.IllegalArgumentException
 
 class CarTest {
     @Test
@@ -10,6 +13,13 @@ class CarTest {
         assertDoesNotThrow {
             Car("aaa")
         }
+    }
+
+    @Test
+    fun `자동차 이름이 5글자를 초과하면 오류가 발생한다`() {
+        assertThrows<IllegalArgumentException> {
+            Car("aaaaaa")
+        }.shouldHaveMessage("이름은 다섯글자를 초과하면 안됩니다.")
     }
 
     @Test
