@@ -1,3 +1,5 @@
+package domain
+
 private const val MINIMUM_MOVE_VALUE = 4
 
 class Car(val name: String) {
